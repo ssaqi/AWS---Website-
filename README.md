@@ -24,3 +24,46 @@ ssh -i your-key-file.pem ubuntu@your-instance-public-d
 sudo apt update && sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
+
+4. Deploy Your Project Using Git
+After setting up the Apache server, follow these steps to deploy your project using Git:
+
+Navigate to the Apache Web Server Directory:
+
+bash Copy code
+sudo cd /var/www/html/
+Create a Directory for Your Projects:
+
+bash
+Copy code
+sudo mkdir projects
+Move into the Projects Directory:
+
+bash Copy code
+sudo cd projects/
+
+Clone Your Git Repository:
+Replace repo_name with the URL of your Git repository.
+
+bash Copy code
+sudo git clone repo_name
+
+Move Project Files to the Root Directory:
+
+Replace folder_name with the name of the folder cloned from the repository.
+
+bash Copy code
+sudo mv folder_name/* .
+Test Your Deployment:
+
+Access your project in the browser by entering the public IP of your EC2 instance.
+
+Ensure the project files are served correctly by Apache.
+
+
+
+
+
+
+
+
